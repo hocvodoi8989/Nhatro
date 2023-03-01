@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tess</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick-theme.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="slick.min.js"></script>
+
+  <script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <nav class="header_bg navbar navbar-expand-md navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <img src="image/logo.png" alt="Logo" />
+      <div class="bell position-relative d-md-none">
+        <span class="bell_chil position-absolute">1</span>
+        <img src="image/bell.png" alt="Bell" />
+      </div>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                style="margin-bottom: 5px;">
+                <path
+                  d="M17.8117 8.58357L16.5266 7.42791L9.45483 1.06857C9.20381 0.842866 8.79683 0.842866 8.5458 1.06857L1.47405 7.42791L0.188288 8.58418C-0.0583689 8.81385 -0.0513248 9.17983 0.204071 9.40164C0.453214 9.61803 0.848174 9.61803 1.09732 9.40164L1.28502 9.23166V16.5079C1.28502 16.8272 1.57285 17.086 1.92792 17.086H16.0714C16.4265 17.086 16.7143 16.8272 16.7143 16.5079V9.23166L16.9026 9.40106C17.158 9.62287 17.565 9.6165 17.8117 9.38687C18.0523 9.16282 18.0523 8.80762 17.8117 8.58357ZM10.9283 15.9298H7.07102V11.3048H10.9283V15.9298ZM15.4285 15.9298H12.2141V10.7267C12.2141 10.4074 11.9263 10.1486 11.5712 10.1486H6.42813C6.07306 10.1486 5.78523 10.4074 5.78523 10.7267V15.9298H2.57082V8.07542L8.99964 2.29418L15.4285 8.07542V15.9298Z"
+                  fill="#ffffff"></path>
+              </svg>
+              Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Phòng trọ quanh đây</a>
+          </li>
+          <li class="nav-item mr-2">
+            <a class="nav-link btn btn-warning" href="#">Đăng tin miễn phí </a>
+          </li>
+          <li class="btn_login nav-item btn btn-secondary d-flex align-items-center p-0">
+            <button class="nav-link" data-toggle="modal" data-target="#form-login">Đăng nhập</button>/<button data-toggle="modal" data-target="#form-register" class="register"> Đăng ký</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="banner_bg">
+    <h2 class="w-100 mb-5 text-uppercase text-center text-white font-weight-bold">Tìm Kiếm tại Hà Nội</h2>
+    <div class="search w-50 m-auto text-center">
+      <form action="" method="get">
+        <div class="frame row">
+          <input class="txt_s col-6" type="text" name="key" placeholder="Nhập từ khóa tìm kiếm quận,huyện,đường phố...">
+          <div class="seperate"></div>
+          <select name="city" class="sl_s col-4">
+            <option value="1">Hà Nội</option>
+            <option value="2">Hà Nội2</option>
+            <option value="3">Hà Nội3</option>
+          </select>
+          <input type="submit" value="Tìm kiếm" class="sm_s col-2 text-white">
+        </div>
+      </form>
+    </div>
+    <div class="tvn w-75 d-flex justify-content-around align-items-center">
+      <div class="tvn_item">
+        <a href=""><img src="image/hotel_xam.png" alt="img">
+          <div class="txt_l">Nhà trọ</div>
+        </a>
+        </a>
+      </div>
+      <div class="tvn_item">
+        <a href=""><img src="image/hotel_xam.png" alt="img">
+          <div class="txt_l">Nhà trọ</div>
+        </a>
+      </div>
+      <div class="tvn_item">
+        <a href=""><img src="image/hotel_xam.png" alt="img">
+          <div class="txt_l">Nhà trọ</div>
+        </a>
+      </div>
+      <div class="tvn_item">
+        <a href=""><img src="image/hotel_xam.png" alt="img">
+          <div class="txt_l">Nhà trọ</div>
+        </a>
+
+      </div>
+      <div class="tvn_item">
+        <a href=""><img src="image/hotel_xam.png" alt="img">
+          <div class="txt_l">Nhà trọ</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="frame-image">
+      <h2 class="text-title">
+        <img src="image/Rectangle 1020.png" alt="image">
+        Xu hướng tìm kiếm
+      </h2>
+      <div class="row justify-content-around mt-5 multiple-items">
+        <div class="col-3">
+          <img src="image/Rectangle 1020.png" alt="Quận 1">
+        </div>
+        <div class="col-3">
+          <img src="image/Rectangle 1020 (1).png" alt="Quận 3">
+        </div>
+        <div class="col-3">
+          <img src="image/Rectangle 1020 (2).png" alt="Quận 8">
+        </div>
+        <div class="col-3">
+          <img src="image/Rectangle 1020 (2).png" alt="Quận 8">
+        </div>
+        <div class="col-3">
+          <img src="image/Rectangle 1020 (2).png" alt="Quận 8">
+        </div>
+        <div class="col-3">
+          <img src="image/Rectangle 1020 (2).png" alt="Quận 8">
+        </div>
+        <div class="col-3">
+          <img src="image/Rectangle 1020 (2).png" alt="Quận 8">
+        </div>
+        <div class="col-3">
+          <img src="image/Rectangle 1020 (2).png" alt="Quận 8">
+        </div>
+        <div class="col-3">
+          <img src="image/Rectangle 1020 (2).png" alt="Quận 8">
+        </div>
+      </div>
+    </div>
+
+    <div class="search-f">
+      <div class="text-white mb-1">
+        Tìm kiếm nhanh
+      </div>
+      <div style="display: flex;">
+        <select class="slc" name="type">
+          <option value="">Loại tin</option>
+        </select>
+        <select class="slc" name="type">
+          <option value="">Tỉnh/Thành phố</option>
+        </select>
+        <select class="slc" name="type">
+          <option value="">Loại tin</option>
+        </select>
+        <select class="slc" name="type">
+          <option value="">Loại tin</option>
+        </select>
+        <select class="slc" name="type">
+          <option value="">Loại tin</option>
+        </select>
+        <select class="slc" name="type">
+          <option value="">Loại tin</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="room mt-5">
+      <div class="list-room">
+        <h2 class="text-title">
+          <img src="image/Rectangle 1020.png" alt="image">
+          Danh sách phòng trọ
+        </h2>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb-lg-5 mb-3">
+            <div class="list-item">
+              <img src="image/phong-tro-cho-thue.jpg" alt="phong tro">
+
+              <div class="list-detail">
+                <h3 class="title">Cho thuê phòng trọ giá rẻ ở Hồ Văn Huê, Phú Nhuận</h3>
+                <div class="price bd-top text-warning webkit-1 lh-32"> $ 4.5 Triệu/Tháng</div>
+                <div class="acreage bd-top webkit-1 lh-32">
+                  <i class="fa-light fa-building-columns"></i>
+                  30 m2
+                </div>
+                <div class="home bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-house"></i>
+                  Wc riêng, không chung chủ
+                </div>
+                <div class="location bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-location-dot"></i>
+                  Số 1,ngách 101, ngõ 102, Quan Hoa, Cầu Giấy, Hà Nội
+                </div>
+                <div class="priview bd-top webkit-2">Nhà đẹp full nội thất mới - Chỉ việc mang vali vào ở.- Phòng đẹp,
+                  sạch sẽ thoáng
+                  mát gần: HV An Ninh, BigC Hà Đông...
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-lg-5 mb-3">
+            <div class="list-item">
+              <img src="image/phong-tro-cho-thue.jpg" alt="phong tro">
+
+              <div class="list-detail">
+                <h3 class="title">Cho thuê phòng trọ giá rẻ ở Hồ Văn Huê, Phú Nhuận</h3>
+                <div class="price bd-top text-warning webkit-1 lh-32"> $ 4.5 Triệu/Tháng</div>
+                <div class="acreage bd-top webkit-1 lh-32">
+                  <i class="fa-light fa-building-columns"></i>
+                  30 m2
+                </div>
+                <div class="home bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-house"></i>
+                  Wc riêng, không chung chủ
+                </div>
+                <div class="location bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-location-dot"></i>
+                  Số 1,ngách 101, ngõ 102, Quan Hoa, Cầu Giấy, Hà Nội
+                </div>
+                <div class="priview bd-top webkit-2">Nhà đẹp full nội thất mới - Chỉ việc mang vali vào ở.- Phòng đẹp,
+                  sạch sẽ thoáng
+                  mát gần: HV An Ninh, BigC Hà Đông...
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-lg-5 mb-3">
+            <div class="list-item">
+              <img src="image/phong-tro-cho-thue.jpg" alt="phong tro">
+
+              <div class="list-detail">
+                <h3 class="title">Cho thuê phòng trọ giá rẻ ở Hồ Văn Huê, Phú Nhuận</h3>
+                <div class="price bd-top text-warning webkit-1 lh-32"> $ 4.5 Triệu/Tháng</div>
+                <div class="acreage bd-top webkit-1 lh-32">
+                  <i class="fa-light fa-building-columns"></i>
+                  30 m2
+                </div>
+                <div class="home bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-house"></i>
+                  Wc riêng, không chung chủ
+                </div>
+                <div class="location bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-location-dot"></i>
+                  Số 1,ngách 101, ngõ 102, Quan Hoa, Cầu Giấy, Hà Nội
+                </div>
+                <div class="priview bd-top webkit-2">Nhà đẹp full nội thất mới - Chỉ việc mang vali vào ở.- Phòng đẹp,
+                  sạch sẽ thoáng
+                  mát gần: HV An Ninh, BigC Hà Đông...
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-lg-5 mb-3">
+            <div class="list-item">
+              <img src="image/phong-tro-cho-thue.jpg" alt="phong tro">
+
+              <div class="list-detail">
+                <h3 class="title">Cho thuê phòng trọ giá rẻ ở Hồ Văn Huê, Phú Nhuận</h3>
+                <div class="price bd-top text-warning webkit-1 lh-32"> $ 4.5 Triệu/Tháng</div>
+                <div class="acreage bd-top webkit-1 lh-32">
+                  <i class="fa-light fa-building-columns"></i>
+                  30 m2
+                </div>
+                <div class="home bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-house"></i>
+                  Wc riêng, không chung chủ
+                </div>
+                <div class="location bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-location-dot"></i>
+                  Số 1,ngách 101, ngõ 102, Quan Hoa, Cầu Giấy, Hà Nội
+                </div>
+                <div class="priview bd-top webkit-2">Nhà đẹp full nội thất mới - Chỉ việc mang vali vào ở.- Phòng đẹp,
+                  sạch sẽ thoáng
+                  mát gần: HV An Ninh, BigC Hà Đông...
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-lg-5 mb-3">
+            <div class="list-item">
+              <img src="image/phong-tro-cho-thue.jpg" alt="phong tro">
+
+              <div class="list-detail">
+                <h3 class="title">Cho thuê phòng trọ giá rẻ ở Hồ Văn Huê, Phú Nhuận</h3>
+                <div class="price bd-top text-warning webkit-1 lh-32"> $ 4.5 Triệu/Tháng</div>
+                <div class="acreage bd-top webkit-1 lh-32">
+                  <i class="fa-light fa-building-columns"></i>
+                  30 m2
+                </div>
+                <div class="home bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-house"></i>
+                  Wc riêng, không chung chủ
+                </div>
+                <div class="location bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-location-dot"></i>
+                  Số 1,ngách 101, ngõ 102, Quan Hoa, Cầu Giấy, Hà Nội
+                </div>
+                <div class="priview bd-top webkit-2">Nhà đẹp full nội thất mới - Chỉ việc mang vali vào ở.- Phòng đẹp,
+                  sạch sẽ thoáng
+                  mát gần: HV An Ninh, BigC Hà Đông...
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-lg-5 mb-3">
+            <div class="list-item">
+              <img src="image/phong-tro-cho-thue.jpg" alt="phong tro">
+
+              <div class="list-detail">
+                <h3 class="title">Cho thuê phòng trọ giá rẻ ở Hồ Văn Huê, Phú Nhuận</h3>
+                <div class="price bd-top text-warning webkit-1 lh-32"> $ 4.5 Triệu/Tháng</div>
+                <div class="acreage bd-top webkit-1 lh-32">
+                  <i class="fa-light fa-building-columns"></i>
+                  30 m2
+                </div>
+                <div class="home bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-house"></i>
+                  Wc riêng, không chung chủ
+                </div>
+                <div class="location bd-top webkit-1 lh-32">
+                  <i class="fa-regular fa-location-dot"></i>
+                  Số 1,ngách 101, ngõ 102, Quan Hoa, Cầu Giấy, Hà Nội
+                </div>
+                <div class="priview bd-top webkit-2">Nhà đẹp full nội thất mới - Chỉ việc mang vali vào ở.- Phòng đẹp,
+                  sạch sẽ thoáng
+                  mát gần: HV An Ninh, BigC Hà Đông...
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="see-all">
+        <a href="#">
+          Xem tất cả
+          <img src="image/Vector1.png" alt=""></a>
+      </div>
+    </div>
+    <div class="search-city mt-5">
+      <div class="d-flex justify-content-between flex-wrap">
+
+        <div class="all-city">
+          <div class="search-s">
+            <img src="/image/search.png" alt="search">
+            Tìm kiếm theo tỉnh thành
+          </div>
+          <div class="row list-city p-2">
+            <div class="col-6">
+              <ul>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="all-city">
+          <div class="search-s">
+            <img src="/image/search.png" alt="search">
+            Tìm kiếm theo tỉnh thành
+          </div>
+          <div class="row list-city p-2">
+            <div class="col-6">
+              <ul>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+                <li class="city">Hà Nội (320)</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner-footer mt-5 mb-5">
+    <img class="position-" src="/image/Rectangle 1125.png" alt="banner">
+  </div>
+  <div class="container">
+    <div class="title-bot mt-5">
+      <div class="column-reverse d-flex">
+        <div class="col-12 col-lg-8">
+          <p class="text-indent">
+            Phụ tá nha khoa là một công việc trở lý phụ trách giúp đỡ cho những bác sĩ nha khoa thực hiện nhiệm vụ chăm sóc sức khỏe răng miệng của bệnh nhân. Vậy công việc cụ thể của phụ tá nha sĩ là gì , có những yêu cầu gì để trở thành một phụ tá nha sĩ. Bài viết dưới đây sẽ là một câu trả lời chi tiết dành cho bạn
+          </p>
+          <h3 class="title-footer text-blue">
+            1. Ngành quản lý nhà nước về an ninh trật tự - những sĩ quan công an nhân dân mai sau 
+          </h3>
+          <p class="text-indent">
+            Khác biệt một chút so với học viên cảnh sát, trường đại học cảnh sát có khu tuyển sinh phía nam theo thông báo tuyển sinh của trường như sau: trường tuyển sinh “Phía Nam thuộc địa bàn Đông Nam Bộ (Thành phố Hồ Chí Minh, các tỉnh Tây Ninh, Bình Dương, Bình Phước, Đồng Nai và Bà Rịa nguồn nhân lực. Vì lẽ, những cử nhân ngành quản lý nhà nước về trật tự an ninh chính là lực lượng nòng cốt của công an nhân Việt Nam - những người trực tiếp bảo vệ sự bình yên của xã hội. Cô dâu từ từ bước vào trong niềm hạnh phúc và xúc động. Ảnh: Đài truyền hình Việt Nam. Cô dâu bất ngờ xuất hiện trong bộ váy cưới lộng lẫy, chú rể xúc động tiến tới, nắm chặt tay người thương rồi nói: "Lâu lắm rồi mới được gặp lại người con gái trong trái tim của mình. Cảm xúc được dồn nén bao nhiêu lâu nay dường như vỡ òa ra. Lúc này tôi rất bối rối, hạnh phúc không nói nên lời".
+          </p>
+          <figure>
+            <img class="img-8" src='/image/Vector (1).png' alt='missing' />
+            <figcaption class="text-center">Máy bay trực thăng quân sự Mi-8. Ảnh: Izvestia.</figcaption>
+          </figure>
+          <p class="text-indent">
+            Trao nhau nhẫn cưới và nụ hôn ngọt ngào, anh chiến sĩ nghẹn ngào nói với vợ: "Từ hôm nay trở đi em đã chính thức thành vợ anh rồi. Anh chỉ mong chúng ta luôn luôn bình an, tin tưởng nhau, động viên nhau, nắm tay nhau đi đến suốt cuộc đời. Anh yêu em".Dù sức khoẻ không được tốt, cô Nguyễn Thị Sâm - mẹ chiến sĩ Hùng đã rất cố gắng để có mặt trong bữa tiệc cưới đặc biệt của con trai, thực hiện được đúng ước mong "ngày cưới, mẹ sẽ đỡ
+          </p>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="last-book">
+            <div class="last-book-img mt-2 mb-2 position-relative">
+              <img src="/image/Vector (2).png" alt="lastBook">
+            </div>
+            <div class="text-absolute text-white text-uppercase">
+              Mục lục
+            </div>
+            <p class="text-blue">1. Ngành quản lý nhà nước về an ninh</p>
+            <ul class="list-book">
+              <li>1.3. Mã ngành, khối thi và trường đào tạo chuyên ngành QLNN về an ninh</li>
+              <li>1.2. Yêu cầu tuyển sinh - Học viện Cảnh sát Nhân dân Việt Nam</li>
+              <li>1.3. Yêu cầu tuyển sinh của trường Đại học Cảnh sát Nhân Dân</li>
+            </ul>
+            <p class="text-blue">2. Sinh viên tốt nghiệp ngành quản lý nhà nước về an ninh trật tự sẽ làm công việc gì?</p>
+          </div>
+          <div>
+            <img class="img-9" src="image/Rectangle 1126.png" alt="b-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div>
+      <img class="img-last" src="image/Group 6072 2.png" alt="footer">
+    </div>
+    
+  </footer>
+
+  
+  <div id="form-login" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="login p-5 position-relative text-center">
+
+        <div class="close">x</div>
+        <p class="title text-primary text-uppercase mb-3">Đăng nhập</p>
+        <input class="text-indent ip-login form-control" type="email" name="email" placeholder="Số điện thoại / Email">
+        <input class="text-indent ip-login form-control" type="password" name="pasword" placeholder="Mật khẩu">
+        <p class="mt-2 mb-4">Quên mật khẩu bấm <a href="#">vào đây</a></p>
+        <button class="btn btn-primary btn-block" type="submit">Đăng nhập</button>
+        <p class="m-2 ">Hoặc</p>
+        <div class="row justify-content-between">
+          <a class="col-6" href=""><img src="/image/Group 5937.png" alt="fb"></a>
+          <a class="col-6" href=""><img src="/image/Group 5938.png" alt="google"></a>
+          
+        </div>
+        <p class="mt-5">Bạn chưa có tài khoản <a class="font-weight-bold" href="">ĐĂNG KÝ NGAY</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="form-register" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="register p-5 position-relative text-center m-3">
+        <div class="close">x</div>
+        <p class="title text-primary text-uppercase mb-3">Đăng ký</p>
+        <p class="m-2">Vui lòng nhập số điện thoại để đăng ký</p>
+        <input class="text-indent ip-login form-control" type="number" name="number" placeholder="Số điện thoại">
+        <button class="btn btn-primary btn-block" type="submit">Tiếp tục</button>
+        <p class="m-2 ">Hoặc</p>
+        <div class="row justify-content-between">
+          <a class="col-6" href=""><img src="/image/Group 5937.png" alt="fb"></a>
+          <a class="col-6" href=""><img src="/image/Group 5938.png" alt="google"></a>
+          
+        </div>
+        <p class="mt-5">Bạn chưa có tài khoản <a class="font-weight-bold" href="">ĐĂNG KÝ NGAY</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="btn-login"></div>
+</body>
+<script>
+  $('.multiple-items').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+
+  });</script>
+ 
+</html>
